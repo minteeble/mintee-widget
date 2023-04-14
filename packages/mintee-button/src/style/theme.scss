@@ -1,0 +1,42 @@
+//fonts
+
+// Theming
+
+$themes: (
+  // Default theme
+  default:
+    (
+      "primary-color": #fff,
+      "primary-disabled": #fff,
+      "primary-hover": #fff,
+      "normal-text-color": #fff,
+      "light-text-color": #fff,
+      "primary-bg": #fff,
+      "secondary-bg": #fff,
+      "dark-border-color": #fff,
+      "border-color": #fff,
+    ),
+  // Dark theme
+  dark:
+    (
+      "primary-color": #fff,
+      "primary-disabled": #fff,
+      "primary-hover": #fff,
+      "normal-text-color": #fff,
+      "light-text-color": #fff,
+      "primary-bg": #fff,
+      "secondary-bg": #fff,
+      "dark-border-color": #fff,
+      "border-color": #fff,
+    )
+);
+
+// Creating theming class names
+@each $name, $map in $themes {
+  .minteeble-#{$name}-theme {
+    @each $key, $value in $map {
+      --#{$key}: #{$value};
+      --#{$key}-trs: #{rgba($value, 0.5)};
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@ai-aggregator/aggregator-backend",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run clean-build",
+    "clean": "lerna run clean",
+    "clean-modules": "lerna clean -y && rm -rf node_modules",
+    "clean-all": "yarn clean && yarn clean-modules"
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.20.0",
+    "lerna": "^6.5.1"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
