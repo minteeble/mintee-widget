@@ -19,9 +19,9 @@ const MinteeButton = (props: MinteeButtonProps) => {
   }, [popup]);
 
   return (
-    <div className="minteeble-button-wrapper">
+    <div className="mintee-button-wrapper">
       {isLoading && (
-        <div className="minteeble-button-loading">
+        <div className="mintee-button-loading">
           {/* <Spinners /> */}
           <span>Loading...</span>
         </div>
@@ -30,7 +30,7 @@ const MinteeButton = (props: MinteeButtonProps) => {
         onClick={() => {
           triggerMint();
         }}
-        className="minteeble-button mint-button"
+        className="mintee-button"
       >
         MINT
       </button>

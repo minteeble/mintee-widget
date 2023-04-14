@@ -1,13 +1,6 @@
-// Importing fonts
-@import "./fonts.scss";
-
-@import "./shared.scss";
-
-// Importing theme
-@import "./theme.scss";
-
 // Importing components
 @import "../components/components.scss";
 
-// Importing style for storybook
-@import "./storybook.scss";
+.test {
+  background-color: red;
+}

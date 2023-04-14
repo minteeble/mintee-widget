@@ -1,5 +1,5 @@
 {
-  "name": "@ai-aggregator/aggregator-backend",
+  "name": "@minteeble/mintee-widget",
   "private": true,
   "workspaces": [
     "packages/*"

@@ -6,8 +6,8 @@ import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import scss from "rollup-plugin-scss";
 import svg from "rollup-plugin-svg";
-import postcss from "postcss";
-import autoprefixer from "autoprefixer";
+// import postcss from "postcss";
+// import autoprefixer from "autoprefixer";
 const path = require("path");
 
 const packageJson = require("./package.json");
