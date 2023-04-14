@@ -12,18 +12,18 @@ const useMinteeButton = (
 ): UseMinteeButtonReturnedValue => {
   const [popup, setPopup] = useState<Window>();
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout>();
-  const [searchParams, setSearchParams] = useSearchParams();
+  // const [searchParams, setSearchParams] = useState<[]>();
 
   let host =
     EnvManager.environment === EnvironmentType.Prod
       ? "https://app.minteeble.com"
       : "https://app-dev.minteeble.com";
 
-  let customHost = searchParams.get("minteeble-url");
+  // let customHost = searchParams.get("minteeble-url");
 
-  if (customHost) {
-    host = customHost;
-  }
+  // if (customHost) {
+  //   host = customHost;
+  // }
 
   const buildMintUrl = (): string => {
     let url = `${host}/mint/chain/${props.chainName}/id/${props.collectionId}${

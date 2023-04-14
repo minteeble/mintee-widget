@@ -12,11 +12,11 @@ const MinteeButton = (props: MinteeButtonProps) => {
     },
   });
 
-  // useEffect(() => {
-  //   if (popup) {
-  //     setIsLoading(true);
-  //   }
-  // }, [popup]);
+  useEffect(() => {
+    if (popup) {
+      setIsLoading(true);
+    }
+  }, [popup]);
 
   return (
     <div className="minteeble-button-wrapper">
@@ -28,7 +28,7 @@ const MinteeButton = (props: MinteeButtonProps) => {
       )}
       <button
         onClick={() => {
-          // triggerMint();
+          triggerMint();
         }}
         className="minteeble-button mint-button"
       >
