@@ -5,8 +5,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "Minteeble UI components package",
-  "repository": "https://github.com/minteeble/ui-components.git",
+  "description": "Minteeble Mint Widget",
+  "repository": "https://github.com/minteeble/mintee-widget.git",
   "author": "Samuele Girgenti <samuele.girgenti458@gmail.com>",
   "license": "MIT",
   "types": "./dist/index.d.ts",

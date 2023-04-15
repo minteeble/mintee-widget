@@ -1,6 +1,9 @@
 {
   "name": "@minteeble/mintee-widget-lib",
   "private": true,
+  "license": "MIT",
+  "description": "Minteeble Mint Widget Lib",
+  "repository": "https://github.com/minteeble/mintee-widget.git",
   "workspaces": [
     "packages/*"
   ],

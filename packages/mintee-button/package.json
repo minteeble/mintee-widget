@@ -1,13 +1,12 @@
 {
   "name": "@minteeble/mintee-button",
   "version": "0.0.3",
-  "description": "Minteeble UI components package",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/minteeble/ui-components.git",
-  "author": "Samuele Girgenti <samuele.girgenti458@gmail.com>",
+  "description": "Minteeble Mint Button",
+  "repository": "https://github.com/minteeble/mintee-widget.git",
   "license": "MIT",
   "types": "./dist/index.d.ts",
   "main": "./dist/cjs/index.js",

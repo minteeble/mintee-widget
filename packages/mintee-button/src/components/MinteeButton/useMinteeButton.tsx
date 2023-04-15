@@ -1,3 +1,13 @@
+/**
+ * Copyright Minteeble 2023. All Rights Reserved.
+ * Node module: @minteeble/ui-components
+ * This file is licensed under the MIT License.
+ * License text available at https://opensource.org/licenses/MIT
+ *
+ * email:     minteeble@gmail.com
+ * website:   https://minteeble.com
+ */
+
 import { EnvironmentType, EnvManager } from "@minteeble/sdk";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
