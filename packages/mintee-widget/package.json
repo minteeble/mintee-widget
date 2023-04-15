@@ -1,6 +1,6 @@
 {
   "name": "@minteeble/mintee-widget",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -73,6 +73,7 @@
   },
   "dependencies": {
     "@metamask/jazzicon": "^2.0.0",
+    "@minteeble/mintee-button": "^0.0.1",
     "@minteeble/utils": "^1.0.76",
     "react-collapsible": "^2.10.0",
     "react-realtime-crypto-prices": "^0.0.1",
@@ -81,8 +82,7 @@
     "react-tooltip": "^5.8.2",
     "sass-loader": "10.0.0",
     "typescript-json-serializer": "^5.1.0",
-    "web3-utils": "^1.7.4",
-    "@minteeble/mintee-button": "0.0.0"
+    "web3-utils": "^1.7.4"
   },
   "peerDependencies": {
     "@minteeble/sdk": "^1.0.41",
