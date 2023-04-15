@@ -1,6 +1,6 @@
 {
   "name": "@minteeble/mintee-button",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Minteeble UI components package",
   "private": false,
   "publishConfig": {
