@@ -6,6 +6,7 @@ import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import scss from "rollup-plugin-scss";
 import svg from "rollup-plugin-svg";
+import json from "@rollup/plugin-json";
 // import postcss from "postcss";
 // import autoprefixer from "autoprefixer";
 const path = require("path");
@@ -29,7 +30,8 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
-      resolve(),
+      resolve({ preferBuiltins: false }),
+      json(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       scss({

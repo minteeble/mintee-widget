@@ -10,6 +10,8 @@ module.exports = {
     name: "@storybook/react-webpack5",
     options: {}
   },
+
+
   webpackFinal: async (config, {
     configType
   }) => {
@@ -42,6 +44,7 @@ module.exports = {
       stream: false,
 
     };
+
     return config;
   },
   docs: {

@@ -1,0 +1,179 @@
+.mint-widget-wrapper {
+  * {
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+
+  button {
+    &:hover {
+      filter: brightness(1.05);
+      transform: scale(1.05);
+    }
+  }
+
+  .amount-controls {
+    border: 1px solid rgba(142, 142, 142, 0.578);
+    border-radius: 0.4rem;
+    color: rgb(103, 121, 127);
+
+    .icon-button {
+      border: 0px;
+    }
+  }
+
+  .label {
+    color: rgb(103, 121, 127);
+    font-size: 0.85rem;
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: rgba(58, 58, 58, 0.792);
+      transition: 0.3s;
+      // color: rgba(196, 2, 2, 0.792);
+    }
+  }
+
+  .mint-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f2f3f7;
+    border-radius: 0.75rem;
+    min-width: 23rem;
+
+    border: 1px solid #e5e7eb;
+
+    .disconnect-wallet {
+      &:hover {
+        color: red;
+      }
+    }
+
+    .connect-wallet-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(103, 121, 127);
+      max-width: 15rem;
+      align-self: stretch;
+      margin: auto;
+      gap: 0.5rem;
+
+      svg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .mint-card-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem;
+      align-self: stretch;
+
+      border: 1px solid rgb(229, 231, 235);
+      border-radius: 0.5rem;
+      background-color: white;
+
+      .up-section,
+      .bottom-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-self: stretch;
+      }
+
+      // .bottom-section {
+      // }
+    }
+
+    .mint-card-header {
+      .mint-card-title {
+        color: rgb(32, 52, 62);
+      }
+    }
+
+    .collection-info {
+      flex-direction: row;
+      align-items: center;
+      $collection-image-size: 2.1rem;
+
+      .collection-image {
+        border-radius: 100%;
+        height: $collection-image-size;
+        width: $collection-image-size;
+      }
+
+      .collection-title {
+        margin: 0rem;
+      }
+    }
+
+    .purchase-details {
+      min-height: 20rem;
+      justify-content: space-between;
+      flex-direction: column-reverse;
+
+      .purchase-items {
+        display: flex;
+        flex-direction: column;
+
+        .item,
+        .sub-item {
+          display: flex;
+          justify-content: space-between;
+
+          .value,
+          .key {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.4rem;
+            color: rgba(58, 58, 58, 0.792);
+
+            .icon-button {
+              font-size: 1rem;
+              height: 1.5rem;
+              width: 1.5rem;
+            }
+          }
+        }
+
+        .item {
+          margin-top: 0.3rem;
+        }
+
+        .sub-item {
+          color: rgb(103, 121, 127);
+          font-size: 0.7rem;
+          align-items: flex-start;
+
+          // .value,
+          // .key {
+          //   align-items: flex-start;
+          // }
+        }
+
+        .bold {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .powered-by {
+    margin-top: 0.3rem;
+  }
+}

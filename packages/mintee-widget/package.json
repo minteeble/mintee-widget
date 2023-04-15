@@ -73,8 +73,12 @@
   },
   "dependencies": {
     "@metamask/jazzicon": "^2.0.0",
+    "@babel/plugin-proposal-decorators": "^7.21.0",
     "@minteeble/mintee-button": "^0.0.1",
+    "@minteeble/sdk": "^1.0.45",
+    "@minteeble/ui-components": "^1.0.53",
     "@minteeble/utils": "^1.0.76",
+    "ethereumjs-util": "^7.1.5",
     "react-collapsible": "^2.10.0",
     "react-realtime-crypto-prices": "^0.0.1",
     "react-responsive-combo-box": "^1.3.0",

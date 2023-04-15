@@ -1,8 +1,7 @@
+//Importing Minteeble UI lib
+@import "../../node_modules/@minteeble/ui-components/dist/css/style";
+
 @import "../../../mintee-button/dist/css/style.css";
 
 // Importing components
 @import "../components/components.scss";
-
-.test {
-  background-color: red;
-}

@@ -1,5 +1,6 @@
 {
   "name": "@minteeble/mintee-widget-lib",
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -15,6 +16,5 @@
   },
   "dependencies": {
     "js-yaml": "^4.1.0"
-  },
-  "version": "0.0.0"
+  }
 }

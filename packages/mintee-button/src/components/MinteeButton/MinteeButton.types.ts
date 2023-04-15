@@ -3,7 +3,7 @@ import { JsonObject, JsonProperty } from "typescript-json-serializer";
 /**
  * Single method mapping interface model
  */
-export interface IParamMappingItem {
+export interface IButtonParamMappingItem {
   /**
    * Method name, to be found inside ABI object
    */
@@ -18,7 +18,7 @@ export interface IParamMappingItem {
 /**
  * Interface model representing the custom method options
  */
-export interface ICustomMintMethodOptions {
+export interface IButtonCustomMintMethodOptions {
   /**
    * Custom method name to be used for mint
    */
@@ -27,7 +27,7 @@ export interface ICustomMintMethodOptions {
   /**
    * Parameters mappings for custom method
    */
-  mappings?: Array<IParamMappingItem>;
+  mappings?: Array<IButtonParamMappingItem>;
 }
 
 /**
@@ -62,7 +62,7 @@ export interface MinteeButtonConfig {
   /**
    * Custom mint config
    */
-  customMintOptions?: ICustomMintMethodOptions;
+  customMintOptions?: IButtonCustomMintMethodOptions;
 
   /**
    * Specifies a custom price in wei to be sent for the mint transactions.
