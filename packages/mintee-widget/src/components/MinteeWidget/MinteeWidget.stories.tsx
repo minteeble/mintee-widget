@@ -12,16 +12,16 @@ import React from "react";
 
 import { Story, Meta } from "@storybook/react";
 
-import MintWidget from "./MintWidget";
-import { MintWidgetProps } from "./MintWidget.types";
+import MinteeWidget from "./MinteeWidget";
+import { MintWidgetProps } from "./MinteeWidget.types";
 
 export default {
-  title: "MintWidget",
-  component: MintWidget,
+  title: "MinteeWidget",
+  component: MinteeWidget,
   argTypes: {},
-} as Meta<typeof MintWidget>;
+} as Meta<typeof MinteeWidget>;
 
-const Template: Story<MintWidgetProps> = (args) => <MintWidget {...args} />;
+const Template: Story<MintWidgetProps> = (args) => <MinteeWidget {...args} />;
 
 export const SimplePoweredByMinteeble = Template.bind({});
 SimplePoweredByMinteeble.args = {

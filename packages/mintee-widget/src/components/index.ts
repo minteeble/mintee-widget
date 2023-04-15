@@ -1,1 +1,1 @@
-export * from "./MintWidget";
+export * from "./MinteeWidget";

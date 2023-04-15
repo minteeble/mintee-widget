@@ -6,7 +6,7 @@ import {
   LoadingSpinner,
   PoweredByMinteeble,
 } from "@minteeble/ui-components";
-import { MintWidgetProps, ParamMappingItem } from "./MintWidget.types";
+import { MintWidgetProps, ParamMappingItem } from "./MinteeWidget.types";
 import {
   EnvironmentType,
   EnvManager,
@@ -34,7 +34,7 @@ import { SmartContractType } from "@minteeble/utils";
  * @param props Widget props
  * @returns Mint Widget JSX Element
  */
-const MintWidget = (props: MintWidgetProps): JSX.Element => {
+const MinteeWidget = (props: MintWidgetProps): JSX.Element => {
   // Services
   // const { signIn, user, signOut } = useAuthService();
   const {
@@ -520,4 +520,4 @@ const MintWidget = (props: MintWidgetProps): JSX.Element => {
   );
 };
 
-export default MintWidget;
+export default MinteeWidget;
