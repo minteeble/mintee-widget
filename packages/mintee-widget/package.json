@@ -1,11 +1,11 @@
 {
-  "name": "@minteeble/mintee-button",
+  "name": "@minteeble/mintee-widget",
   "version": "0.0.0",
-  "description": "Minteeble UI components package",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
+  "description": "Minteeble UI components package",
   "repository": "https://github.com/minteeble/ui-components.git",
   "author": "Samuele Girgenti <samuele.girgenti458@gmail.com>",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "/dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "clean-build": "rollup -c",
     "storybook": "storybook dev",
     "build-storybook": "storybook build",
     "set-dev": "./scripts/set-dev-env.sh"
@@ -81,7 +81,8 @@
     "react-tooltip": "^5.8.2",
     "sass-loader": "10.0.0",
     "typescript-json-serializer": "^5.1.0",
-    "web3-utils": "^1.7.4"
+    "web3-utils": "^1.7.4",
+    "@minteeble/mintee-button": "0.0.0"
   },
   "peerDependencies": {
     "@minteeble/sdk": "^1.0.41",
