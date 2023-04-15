@@ -1,6 +1,6 @@
 {
   "name": "@minteeble/mintee-widget",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -72,9 +72,9 @@
     "web3modal": "^1.9.8"
   },
   "dependencies": {
-    "@metamask/jazzicon": "^2.0.0",
     "@babel/plugin-proposal-decorators": "^7.21.0",
-    "@minteeble/mintee-button": "^0.0.1",
+    "@metamask/jazzicon": "^2.0.0",
+    "@minteeble/mintee-button": "^0.0.2",
     "@minteeble/sdk": "^1.0.45",
     "@minteeble/ui-components": "^1.0.53",
     "@minteeble/utils": "^1.0.76",
