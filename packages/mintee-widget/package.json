@@ -16,10 +16,11 @@
     "/dist"
   ],
   "scripts": {
-    "clean-build": "rollup -c",
+    "clean": "rm -rf dist",
+    "build": "rollup -c",
+    "clean-build": "yarn clean && yarn build",
     "storybook": "storybook dev",
-    "build-storybook": "storybook build",
-    "set-dev": "./scripts/set-dev-env.sh"
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
