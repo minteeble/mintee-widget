@@ -1,6 +1,6 @@
 /**
  * Copyright Minteeble 2023. All Rights Reserved.
- * Node module: @minteeble/ui-components
+ * Package: @minteeble/mintee-widget
  * This file is licensed under the MIT License.
  * License text available at https://opensource.org/licenses/MIT
  *
@@ -9,6 +9,9 @@
  */
 
 import React, { useEffect, useState } from "react";
+import LoadingSpinner, {
+  LoadingSpinnerSize,
+} from "./components/LoadingSpinner";
 import { MinteeButtonProps } from "./MinteeButton.types";
 import useMinteeButton from "./useMinteeButton";
 
@@ -32,8 +35,7 @@ const MinteeButton = (props: MinteeButtonProps) => {
     <div className="mintee-button-wrapper">
       {isLoading && (
         <div className="mintee-button-loading">
-          {/* <Spinners /> */}
-          <span>Loading...</span>
+          <LoadingSpinner Size={LoadingSpinnerSize.Large} />
         </div>
       )}
       <button

@@ -1,9 +1,69 @@
-// .mintee-button-wrapper {
-//   .mintee-button-loading {
+/**
+ * Copyright Minteeble 2023. All Rights Reserved.
+ * Package: @minteeble/mintee-widget
+ * This file is licensed under the MIT License.
+ * License text available at https://opensource.org/licenses/MIT
+ *
+ * email:     minteeble@gmail.com
+ * website:   https://minteeble.com
+ */
 
-//   }
+.mintee-button-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-//   .mintee-button {
+  * {
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+  }
 
-//   }
-// }
+  .mintee-button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    border-style: outset;
+    border-width: 0px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    min-width: 4rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #53c2de;
+    color: white;
+
+    &:disabled {
+      background-color: #73a0ac;
+    }
+
+    &:hover {
+      filter: brightness(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  .mintee-button-loading {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(30, 28, 28, 0.68);
+    z-index: 99999;
+    span {
+      font-family: var(--space);
+      color: white;
+    }
+  }
+}

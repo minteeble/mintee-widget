@@ -1,6 +1,6 @@
 /**
  * Copyright Minteeble 2023. All Rights Reserved.
- * Node module: @minteeble/ui-components
+ * Package: @minteeble/mintee-widget
  * This file is licensed under the MIT License.
  * License text available at https://opensource.org/licenses/MIT
  *

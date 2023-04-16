@@ -1,6 +1,6 @@
 /**
  * Copyright Minteeble 2023. All Rights Reserved.
- * Node module: @minteeble/ui-components
+ * Package: @minteeble/mintee-widget
  * This file is licensed under the MIT License.
  * License text available at https://opensource.org/licenses/MIT
  *
@@ -16,15 +16,15 @@ import MinteeButton from "./MinteeButton";
 import { MinteeButtonProps } from "./MinteeButton.types";
 
 export default {
-  title: "ui-components/common/MinteeButton",
+  title: "components/MinteeButton",
   component: MinteeButton,
   argTypes: {},
 } as Meta<typeof MinteeButton>;
 
 const Template: Story<MinteeButtonProps> = (args) => <MinteeButton {...args} />;
 
-export const SimplePoweredByMinteeble = Template.bind({});
-SimplePoweredByMinteeble.args = {
+export const DefaultMinteeButton = Template.bind({});
+DefaultMinteeButton.args = {
   chainName: "sepolia",
   collectionId: "087b8459-544a-46e0-bb10-c13d8d67727a",
 };
