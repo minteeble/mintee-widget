@@ -5,7 +5,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "Minteeble Mint Button",
+  "description": "Minteeble Mint Button.",
   "repository": "https://github.com/minteeble/mintee-widget.git",
   "license": "MIT",
   "types": "./dist/index.d.ts",
