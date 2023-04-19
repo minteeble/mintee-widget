@@ -8,7 +8,6 @@
  * website:   https://minteeble.com
  */
 
-import { EnvironmentType, EnvManager } from "@minteeble/sdk";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
@@ -25,7 +24,7 @@ const useMinteeButton = (
   // const [searchParams, setSearchParams] = useState<[]>();
 
   let host =
-    (props.stage || EnvManager.environment) === EnvironmentType.Prod
+    props.stage === "prod"
       ? "https://app.minteeble.com"
       : "https://app-dev.minteeble.com";
 

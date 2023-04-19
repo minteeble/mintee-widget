@@ -8,8 +8,6 @@
  * website:   https://minteeble.com
  */
 
-import { EnvironmentType, EnvManager } from "@minteeble/sdk";
-
 /**
  * Single method mapping interface model
  */
@@ -93,7 +91,7 @@ export interface MinteeButtonConfig {
   /**
    * Current stage. Overwrites the global envirnoment type
    */
-  stage?: EnvironmentType;
+  stage?: "prod" | "dev";
 }
 
 /**

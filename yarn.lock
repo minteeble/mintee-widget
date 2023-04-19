@@ -3834,7 +3834,7 @@
   resolved "https://registry.yarnpkg.com/@metamask/safe-event-emitter/-/safe-event-emitter-2.0.0.tgz#af577b477c683fad17c619a78208cede06f9605c"
   integrity sha512-/kSXhY692qiV1MXu6EeOZvg5nECLclxNXcKCxJ3cXQgYuRymRHpdx/t7JXfsK+JLjwA1e1c1/SBrlQYpusC29Q==
 
-"@minteeble/sdk@^1.0.43", "@minteeble/sdk@^1.0.45":
+"@minteeble/sdk@^1.0.45":
   version "1.0.45"
   resolved "https://registry.yarnpkg.com/@minteeble/sdk/-/sdk-1.0.45.tgz#c4c4a0ca3995575392d1f1939c78a56c03cd804d"
   integrity sha512-2gwkkdB1FN7J0DNDc5SFw4jPcqGfMYkId+UhSUiurbqtgjHuHdkFZn/PxgAbDNT3GErpWYqhz4C+hfGV4f17qQ==
