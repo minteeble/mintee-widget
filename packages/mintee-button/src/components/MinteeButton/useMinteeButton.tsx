@@ -25,7 +25,7 @@ const useMinteeButton = (
   // const [searchParams, setSearchParams] = useState<[]>();
 
   let host =
-    EnvManager.environment === EnvironmentType.Prod
+    (props.stage || EnvManager.environment) === EnvironmentType.Prod
       ? "https://app.minteeble.com"
       : "https://app-dev.minteeble.com";
 
