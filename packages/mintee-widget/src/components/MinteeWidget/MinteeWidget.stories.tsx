@@ -13,7 +13,7 @@ import React from "react";
 import { Story, Meta } from "@storybook/react";
 
 import MinteeWidget from "./MinteeWidget";
-import { MintWidgetProps } from "./MinteeWidget.types";
+import { MintWidgetProps, UseMinteeWidgetProps } from "./MinteeWidget.types";
 
 export default {
   title: "MinteeWidget",
@@ -23,8 +23,15 @@ export default {
 
 const Template: Story<MintWidgetProps> = (args) => <MinteeWidget {...args} />;
 
-export const SimplePoweredByMinteeble = Template.bind({});
-SimplePoweredByMinteeble.args = {
+export const NormalERC721 = Template.bind({});
+(NormalERC721.args as MintWidgetProps) = {
   chainName: "sepolia",
   collectionId: "1930be15-8fbe-4ab5-a4e7-02064b5bae5c",
+};
+
+export const NormalERC1155 = Template.bind({});
+(NormalERC1155.args as MintWidgetProps) = {
+  chainName: "sepolia",
+  collectionId: "4705c57e-fb43-4ecb-b540-6d8c3ee60149",
+  erc1155Id: "1",
 };
