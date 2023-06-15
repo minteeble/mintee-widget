@@ -34,7 +34,7 @@ import { BN } from "ethereumjs-util";
 import {
   MinteebleERC721CollectionInstance,
   MinteebleERC1155CollectionInstance,
-} from "@minteeble/sdk/lib/esm/services/Nft/NftCollection/NftCollectionInstance";
+} from "@minteeble/sdk";
 import { SmartContractType } from "@minteeble/utils";
 // import { NotificationHandler } from "../../../../Utils/NotificationHandler";
 

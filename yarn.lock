@@ -3865,6 +3865,13 @@
   dependencies:
     typescript-json-serializer "^5.1.0"
 
+"@minteeble/utils@^1.0.142":
+  version "1.0.142"
+  resolved "https://registry.yarnpkg.com/@minteeble/utils/-/utils-1.0.142.tgz#38c7df5b572908f19349999663061ca534516a9f"
+  integrity sha512-aj1yNir+YOnjklYXTyxX5oUnYBQhtf1uksfCG1HtnMx8H/5L2bMtLGn+H455G5Bw6DbggjGyeN88vOy+z80bmw==
+  dependencies:
+    typescript-json-serializer "^5.1.0"
+
 "@ndelangen/get-tarball@^3.0.7":
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/@ndelangen/get-tarball/-/get-tarball-3.0.7.tgz#87c7aef2df4ff4fbdbab6ac9ed32cee142c4b1a3"

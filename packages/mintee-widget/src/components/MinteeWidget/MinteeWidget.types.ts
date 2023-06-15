@@ -8,6 +8,7 @@
  * website:   https://minteeble.com
  */
 
+import { INotificationHandler } from "@minteeble/utils";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { AbiItem } from "web3-utils";
 
@@ -117,4 +118,9 @@ export interface MintWidgetProps {
    * NFTs amount to be minted
    */
   amount?: number;
+
+  /**
+   * Optional notification handler for handling errors and other kind of messages.
+   */
+  notificationHandler?: INotificationHandler;
 }

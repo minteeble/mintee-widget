@@ -78,7 +78,7 @@
     "@minteeble/mintee-button": "^0.0.7",
     "@minteeble/sdk": "^1.0.60",
     "@minteeble/ui-components": "^1.0.64",
-    "@minteeble/utils": "^1.0.141",
+    "@minteeble/utils": "^1.0.142",
     "ethereumjs-util": "^7.1.5",
     "react-collapsible": "^2.10.0",
     "react-realtime-crypto-prices": "^0.0.1",
