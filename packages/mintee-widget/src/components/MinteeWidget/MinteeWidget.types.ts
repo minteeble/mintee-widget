@@ -72,7 +72,7 @@ export class CustomMintOptions implements ICustomMintOptions {
 /**
  * Props model for Minteeble Mint Widget component
  */
-export interface MintWidgetProps {
+export interface UseMinteeWidgetProps {
   /**
    * Specifies if "Powered by Minteeble" label should be shown or not
    */
@@ -124,3 +124,14 @@ export interface MintWidgetProps {
    */
   notificationHandler?: INotificationHandler;
 }
+
+/**
+ * Object returned by UseMinteeWidget hook, containing all the required states and methods
+ * for handling the minting operation.
+ */
+export interface MinteeWidgetLogic {}
+
+/**
+ * Props model for Minteeble Mint Widget component
+ */
+export interface MintWidgetProps extends UseMinteeWidgetProps {}
