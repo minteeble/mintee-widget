@@ -17,7 +17,11 @@ import {
 import { SmartContractType } from "@minteeble/utils";
 import { BN } from "ethereumjs-util";
 import { useState, useEffect } from "react";
-import { MinteeWidgetLogic, ParamMappingItem, UseMinteeWidgetProps } from ".";
+import {
+  MinteeWidgetLogic,
+  ParamMappingItem,
+  UseMinteeWidgetProps,
+} from "./MinteeWidget.types";
 
 /**
  * Custom hook for handling minting operations.
