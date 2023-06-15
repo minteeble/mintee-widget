@@ -141,7 +141,7 @@ const useMinteeWidget = (props: UseMinteeWidgetProps) => {
     }
   }, [mintPrice]);
 
-  const singInUser = async () => {
+  const signInUser = async () => {
     setIsSigningIn(true);
     try {
       await connectWallet();
@@ -155,16 +155,16 @@ const useMinteeWidget = (props: UseMinteeWidgetProps) => {
     await disconnectWallet();
   };
 
-  /**
-   * Minifies a wallet address. Example:
-   * 0xE53A10BeF39f00f11042c6E06ED1e4D79CEC352F -> 0xE53A...352F
-   *
-   * @param walletAddress Wallet address to be minified
-   */
-  const minifyAddress = (walletAddress: string) => {
-    return walletAddress.length === 42
-      ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(38)}`
-      : "-";
+  const incrementMintAmount = () => {
+    setMintAmount((currentAmount) => {
+      return currentAmount + 1;
+    });
+  };
+
+  const decrementMintAmount = () => {
+    setMintAmount((currentAmount) => {
+      return currentAmount > 1 ? currentAmount - 1 : currentAmount;
+    });
   };
 
   const evalCustomMethodFees = async () => {
@@ -369,7 +369,21 @@ const useMinteeWidget = (props: UseMinteeWidgetProps) => {
   };
 
   // Mint logic object
-  const mintLogic: MinteeWidgetLogic = {};
+  const mintLogic: MinteeWidgetLogic = {
+    nftCollection,
+    mintAmount,
+    mintPrice,
+    fees,
+    totalPrice,
+    signInUser,
+    signOutUser,
+    incrementMintAmount,
+    decrementMintAmount,
+    isSigningIn,
+    mint,
+  };
 
   return mintLogic;
 };
+
+export default useMinteeWidget;

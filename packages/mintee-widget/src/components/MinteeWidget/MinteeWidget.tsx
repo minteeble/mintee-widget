@@ -36,7 +36,8 @@ import {
   MinteebleERC1155CollectionInstance,
 } from "@minteeble/sdk";
 import { SmartContractType } from "@minteeble/utils";
-import useMinteeWidget from "./useMinteeWidgets";
+import useMinteeWidget from "./useMinteeWidget";
+import { MinteeWidgetUtils } from "./MinteeWidgetUtils";
 
 /**
  * Minteeble Mint Widget
@@ -45,6 +46,10 @@ import useMinteeWidget from "./useMinteeWidgets";
  * @returns Mint Widget JSX Element
  */
 const MinteeWidget = (props: MintWidgetProps): JSX.Element => {
+  // Hooks
+  const { web3, userIsSigning, walletAddress } = useWalletService();
+
+  // Mint logic object
   const mintLogic = useMinteeWidget(props);
 
   return (
@@ -52,16 +57,17 @@ const MinteeWidget = (props: MintWidgetProps): JSX.Element => {
       <div className="mint-card">
         <div className="mint-card-header">
           <h2 className="mint-card-title">
-            Minting {mintAmount} Item{mintAmount > 1 ? "s" : ""}
+            Minting {mintLogic.mintAmount} Item
+            {mintLogic.mintAmount > 1 ? "s" : ""}
           </h2>
           {walletAddress && (
             <span className="label">
-              Wallet: {minifyAddress(walletAddress)}{" "}
+              Wallet: {MinteeWidgetUtils.minifyAddress(walletAddress)}{" "}
               <a
                 href="#"
                 className="disconnect-wallet"
                 onClick={() => {
-                  signOutUser();
+                  mintLogic.signOutUser();
                 }}
               >
                 (disconnect)
@@ -75,7 +81,7 @@ const MinteeWidget = (props: MintWidgetProps): JSX.Element => {
             className="collection-image"
           /> */}
           <h3 className="collection-title">
-            {nftCollection?.collectionName || "-"}
+            {mintLogic.nftCollection?.collectionName || "-"}
           </h3>
         </div>
 
@@ -86,26 +92,28 @@ const MinteeWidget = (props: MintWidgetProps): JSX.Element => {
                 <div className="item">
                   <div className="key bold">Total</div>
                   <div className="value bold">
-                    {web3 ? `≈ ${web3.utils.fromWei(totalPrice)} ETH` : "- ETH"}
+                    {web3
+                      ? `≈ ${web3.utils.fromWei(mintLogic.totalPrice)} ETH`
+                      : "- ETH"}
                   </div>
                 </div>
               </div>
             )}
 
-            {isSigningIn ? (
+            {mintLogic.isSigningIn ? (
               <LoadingSpinner />
             ) : walletAddress ? (
               <Button
                 text="MINT"
                 onClick={() => {
-                  mint();
+                  mintLogic.mint();
                 }}
               />
             ) : (
               <Button
                 text="CONNECT WALLET"
                 onClick={() => {
-                  singInUser();
+                  mintLogic.signInUser();
                 }}
               />
             )}
@@ -121,19 +129,21 @@ const MinteeWidget = (props: MintWidgetProps): JSX.Element => {
               <div className="up-section">
                 <span className="label">Purchase details</span>
                 <div className="purchase-items">
-                  {fees && (
+                  {mintLogic.fees && (
                     <div className="item">
                       <div className="key">Fees</div>
                       <div className="value">
-                        ≈ {web3.utils.fromWei(fees)} ETH
+                        ≈ {web3.utils.fromWei(mintLogic.fees)} ETH
                       </div>
                     </div>
                   )}
                   <div className="item">
                     <div className="key bold">NFTs</div>
                     <div className="value bold">
-                      {mintPrice ? (
-                        web3.utils.fromWei(mintPrice.muln(mintAmount))
+                      {mintLogic.mintPrice ? (
+                        web3.utils.fromWei(
+                          mintLogic.mintPrice.muln(mintLogic.mintAmount)
+                        )
                       ) : (
                         <LoadingSpinner />
                       )}{" "}
@@ -145,27 +155,24 @@ const MinteeWidget = (props: MintWidgetProps): JSX.Element => {
                       <IconButton
                         icon={<FontAwesomeIcon icon={faMinus} />}
                         onClick={() => {
-                          setMintAmount((currentAmount) => {
-                            return currentAmount > 1
-                              ? currentAmount - 1
-                              : currentAmount;
-                          });
+                          mintLogic.decrementMintAmount();
                         }}
                       />
-                      {mintAmount}
+                      {mintLogic.mintAmount}
                       <IconButton
                         icon={<FontAwesomeIcon icon={faPlus} />}
                         onClick={() => {
-                          setMintAmount((currentAmount) => {
-                            return currentAmount + 1;
-                          });
+                          mintLogic.incrementMintAmount();
                         }}
                       />
                     </div>
                     {!web3 && <div>Test</div>}
                     <div className="value">
-                      {mintAmount} x{" "}
-                      {mintPrice ? web3.utils.fromWei(mintPrice) : "-"} ETH
+                      {mintLogic.mintAmount} x{" "}
+                      {mintLogic.mintPrice
+                        ? web3.utils.fromWei(mintLogic.mintPrice)
+                        : "-"}{" "}
+                      ETH
                     </div>
                   </div>
                 </div>

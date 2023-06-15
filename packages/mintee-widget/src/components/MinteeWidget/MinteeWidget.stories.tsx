@@ -14,7 +14,7 @@ import { Story, Meta } from "@storybook/react";
 
 import MinteeWidget from "./MinteeWidget";
 import { MintWidgetProps } from "./MinteeWidget.types";
-import { NotificationHandler } from "../../../.storybook/NotificationHandler";
+// import { NotificationHandler } from "./NotificationHandler";
 
 export default {
   title: "MinteeWidget",
@@ -22,11 +22,11 @@ export default {
   argTypes: {},
 } as Meta<typeof MinteeWidget>;
 
-const Template: Story<MintWidgetProps> = (args) => <MinteeWidget {...args} />;
+const Template: Story<MintWidgetProps> = (args) => <div>ciao</div>;
 
 export const SimplePoweredByMinteeble = Template.bind({});
 (SimplePoweredByMinteeble.args as MintWidgetProps) = {
   chainName: "sepolia",
-  collectionId: "087b8459-544a-46e0-bb10-c13d8d67727a",
-  notificationHandler: NotificationHandler.instance,
+  collectionId: "1930be15-8fbe-4ab5-a4e7-02064b5bae5c",
+  // notificationHandler: NotificationHandler.instance,
 };
