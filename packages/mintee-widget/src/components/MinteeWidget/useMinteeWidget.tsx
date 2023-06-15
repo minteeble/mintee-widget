@@ -22,6 +22,7 @@ import {
   ParamMappingItem,
   UseMinteeWidgetProps,
 } from "./MinteeWidget.types";
+import { MinteeWidgetDefaultNotificationHandler } from "./NotificationHandler";
 
 /**
  * Custom hook for handling minting operations.
@@ -66,6 +67,10 @@ const useMinteeWidget = (props: UseMinteeWidgetProps) => {
       totalPrice = totalPrice.add(fees);
     }
   }
+
+  let notificationHandler =
+    props.notificationHandler ||
+    MinteeWidgetDefaultNotificationHandler.instance;
 
   useEffect(() => {
     (async () => {

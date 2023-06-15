@@ -1,18 +1,20 @@
 import { INotificationHandler } from "@minteeble/utils";
 import { ToastOptions, toast } from "react-toastify";
 
-export class NotificationHandler implements INotificationHandler {
+export class MinteeWidgetDefaultNotificationHandler
+  implements INotificationHandler
+{
   /**
    * Class instanceto Follow singleton design
    */
-  private static _instance: NotificationHandler;
+  private static _instance: MinteeWidgetDefaultNotificationHandler;
 
   /**
    * Get instance method or create if not exists
    */
-  public static get instance(): NotificationHandler {
+  public static get instance(): MinteeWidgetDefaultNotificationHandler {
     if (!this._instance) {
-      this._instance = new NotificationHandler();
+      this._instance = new MinteeWidgetDefaultNotificationHandler();
     }
 
     return this._instance;

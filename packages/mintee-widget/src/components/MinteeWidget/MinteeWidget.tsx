@@ -17,25 +17,13 @@ import {
   PoweredByMinteeble,
 } from "@minteeble/ui-components";
 import { MintWidgetProps, ParamMappingItem } from "./MinteeWidget.types";
-import {
-  EnvironmentType,
-  EnvManager,
-  useAuthService,
-  useNftCollectionService,
-  useWalletService,
-} from "@minteeble/sdk";
+import { EnvironmentType, EnvManager, useWalletService } from "@minteeble/sdk";
 import {
   faCircleExclamation,
   faMinus,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { BN } from "ethereumjs-util";
-import {
-  MinteebleERC721CollectionInstance,
-  MinteebleERC1155CollectionInstance,
-} from "@minteeble/sdk";
-import { SmartContractType } from "@minteeble/utils";
 import useMinteeWidget from "./useMinteeWidget";
 import { MinteeWidgetUtils } from "./MinteeWidgetUtils";
 
