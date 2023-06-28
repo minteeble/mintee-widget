@@ -27,6 +27,7 @@ export default [
         sourcemap: true,
       },
     ],
+    resolve: ({ browser: true }),
     plugins: [
       peerDepsExternal(),
       resolve(),
@@ -46,6 +47,7 @@ export default [
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
+    resolve: ({ browser: true })
   },
   {
     input: "src/style.ts",
