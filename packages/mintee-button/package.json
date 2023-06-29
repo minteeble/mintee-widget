@@ -70,7 +70,7 @@
   },
   "dependencies": {
     "@metamask/jazzicon": "^2.0.0",
-    "@minteeble/utils": "^1.0.141",
+    "@minteeble/utils": "^1.0.142-redeem.9",
     "react-collapsible": "^2.10.0",
     "react-realtime-crypto-prices": "^0.0.1",
     "react-responsive-combo-box": "^1.3.0",

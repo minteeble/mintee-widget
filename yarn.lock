@@ -3834,12 +3834,12 @@
   resolved "https://registry.yarnpkg.com/@metamask/safe-event-emitter/-/safe-event-emitter-2.0.0.tgz#af577b477c683fad17c619a78208cede06f9605c"
   integrity sha512-/kSXhY692qiV1MXu6EeOZvg5nECLclxNXcKCxJ3cXQgYuRymRHpdx/t7JXfsK+JLjwA1e1c1/SBrlQYpusC29Q==
 
-"@minteeble/sdk@^1.0.60":
-  version "1.0.60"
-  resolved "https://registry.yarnpkg.com/@minteeble/sdk/-/sdk-1.0.60.tgz#8473215a3e12024a1cfd0a0bce7d778c13741666"
-  integrity sha512-h+wNsURntHQqOy0D11p5Di6zrsZI2BWLy947DxmHvjCBtSY1zA5WnLVOBTZALB7c7JMNqscd5xlPTWlqyjBsoA==
+"@minteeble/sdk@1.0.61":
+  version "1.0.61"
+  resolved "https://registry.yarnpkg.com/@minteeble/sdk/-/sdk-1.0.61.tgz#08a099fc03d8faa4198c76e49338d7b0677e4eca"
+  integrity sha512-9e5Ojyu5ECPxRxvqLkWvxyILh5NxpCQ35XZomyJMdB/BFTa5pzWcf46TipoVGjiBgq3CXpxnQHITLlpTxxY/oA==
   dependencies:
-    "@minteeble/utils" "^1.0.141"
+    "@minteeble/utils" "1.0.140-reveal.1"
     "@walletconnect/web3-provider" "^1.7.8"
     aws-amplify "^4.3.37"
     axios "^1.3.3"
@@ -3858,17 +3858,17 @@
     react-responsive-combo-box "^1.3.0"
     web3-utils "^1.7.4"
 
-"@minteeble/utils@^1.0.141":
-  version "1.0.141"
-  resolved "https://registry.yarnpkg.com/@minteeble/utils/-/utils-1.0.141.tgz#dfb9aa5186cb7be770b7135255e1d49c333e9370"
-  integrity sha512-/bFJksHDt0eRRfDHxBnzAJ5LiqvEeviyJOEId1LAXyHrJJwNZO2l4WG4h9+Myi62xSBytHqT6mD0R1KzmQImSw==
+"@minteeble/utils@1.0.140-reveal.1":
+  version "1.0.140-reveal.1"
+  resolved "https://registry.yarnpkg.com/@minteeble/utils/-/utils-1.0.140-reveal.1.tgz#3eb925bb743d39109e41e0b1fca548dbc1ee31ce"
+  integrity sha512-gjupxxuTTZDZBXmPVF783sTMTiLvXPr8btDa5LA2zUsT5uYSz4xWLy3dVaYHy4jKh/sZ+CqMacR1RtpMqIZmhA==
   dependencies:
     typescript-json-serializer "^5.1.0"
 
-"@minteeble/utils@^1.0.142":
-  version "1.0.142"
-  resolved "https://registry.yarnpkg.com/@minteeble/utils/-/utils-1.0.142.tgz#38c7df5b572908f19349999663061ca534516a9f"
-  integrity sha512-aj1yNir+YOnjklYXTyxX5oUnYBQhtf1uksfCG1HtnMx8H/5L2bMtLGn+H455G5Bw6DbggjGyeN88vOy+z80bmw==
+"@minteeble/utils@^1.0.142-redeem.9":
+  version "1.0.142-redeem.9"
+  resolved "https://registry.yarnpkg.com/@minteeble/utils/-/utils-1.0.142-redeem.9.tgz#09456a5bad0c99304039b695a8f8aae22a7a13cf"
+  integrity sha512-CI9IW/DY1qDf3Z1Gh/mHgpP+uflhqYhRyHvdKq0Vz0/K5zTcdpZa9gjIBy0BMvhP8yGFHrJrbP8echXPNEtEIQ==
   dependencies:
     typescript-json-serializer "^5.1.0"
 
