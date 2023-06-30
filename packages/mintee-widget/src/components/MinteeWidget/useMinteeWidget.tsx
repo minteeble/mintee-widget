@@ -353,6 +353,8 @@ const useMinteeWidget = (props: UseMinteeWidgetProps) => {
 
             if (props.notificationHandler) {
               notificationHandler.error(err);
+            } else {
+              console.log("Notification handler not found");
             }
           }
         }
