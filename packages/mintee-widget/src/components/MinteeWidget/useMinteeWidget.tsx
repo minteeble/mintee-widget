@@ -331,10 +331,11 @@ const useMinteeWidget = (props: UseMinteeWidgetProps) => {
             await (
               nftCollection as MinteebleERC721CollectionInstance
             ).smartContract.mintToken(mintAmount);
-            // NotificationHandler.instance.success("Successfully Minted");
+            if (props.notificationHandler) {
+              notificationHandler.success("Successfully Minted");
+            }
           } catch (err: any) {
             console.log(err);
-            // NotificationHandler.instance.error(err);
           }
         } else if (
           nftCollection.type === SmartContractType.MINTEEBLE_ERC1155 &&
@@ -344,10 +345,15 @@ const useMinteeWidget = (props: UseMinteeWidgetProps) => {
             await (
               nftCollection as MinteebleERC1155CollectionInstance
             ).smartContract.mintToken(parseInt(props.erc1155Id), mintAmount);
-            // NotificationHandler.instance.success("Successfully Minted");
+            if (props.notificationHandler) {
+              notificationHandler.success("Successfully Minted");
+            }
           } catch (err: any) {
             console.log(err);
-            // NotificationHandler.instance.error(err);
+
+            if (props.notificationHandler) {
+              notificationHandler.error(err);
+            }
           }
         }
       }
